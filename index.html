@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta descripción exacta para indexación en buscadores -->
+    <meta name="description" content="This is the orgional and the best flash video on the 'net. Once found on www.youdontknowwhoiam.org, not found where it belong, right here on...">
+    
+    <!-- Favicon apuntando a tu archivo de imagen -->
+    <link rel="icon" href="youareanidiot.png" type="image/png">
+
+    <!-- Título exacto con el paréntesis de dot a org -->
+    <title>You are an Idiot! (dot org)</title>
+    
+    <style>
+        /* Configuración global de la página */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* Fondo completamente blanco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: sans-serif;
+            /* Evita la selección de texto en la web */
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Contenedor del botón de inicio */
+        #intro-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Réplica exacta en CSS del botón de tu imagen */
+        .play-button {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff9e36 0%, #ff6236 45%, #ff3b30 100%);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 28px rgba(255, 59, 48, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 14px 34px rgba(255, 59, 48, 0.35);
+        }
+
+        .play-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Triángulo blanco interno perfectamente centrado en el medio */
+        .play-button svg {
+            width: 80px; 
+            height: 80px;
+            fill: #ffffff;
+            display: block;
+        }
+
+        /* Estilos del video para cumplir con tus requisitos de tamaño */
+        #video-container {
+            display: none; /* Oculto hasta que se presione el botón */
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #idiot-video {
+            height: 100vh;              /* Choca exactamente con los bordes de arriba y abajo */
+            width: auto;                /* Mantiene el ancho proporcional automático */
+            max-width: 100vw;
+            object-fit: contain;        /* Mantiene su forma y aspecto original sin deformarse */
+            /* Desactiva el menú de descarga nativo en navegadores basados en Chromium */
+            pointer-events: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pantalla de inicio con el botón personalizado basado en tu imagen -->
+    <div id="intro-screen">
+        <button class="play-button" id="start-btn" aria-label="Reproducir">
+            <svg viewBox="0 0 24 24">
+                <path d="M7 5v14l13-7z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Contenedor del video principal buscando en la carpeta media -->
+    <div id="video-container">
+        <video id="idiot-video" src="media/youare.mp4" loop muted playsinline controlsList="nodownload"></video>
+    </div>
+
+    <!-- Audio cargado por separado buscando en la carpeta media -->
+    <audio id="idiot-audio" src="media/youare.mp3" loop></audio>
+
+    <!-- Vinculación apuntando adentro de la carpeta script -->
+    <script src="script/you.js"></script>
+
+</body>
+</html>
